@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  height: 100vh;
+  
+  background: linear-gradient(-55deg, #ca6262, #e07e63, #f3a2dc, #a18cd1);
+  /* for to animate(move)*/
+  animation: gradientBG 15s ease infinite;
+   background-size:   400% 400%;
+}
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+     100% {background-position: 0% 50%;}
+}
+.strt {
+  color:#2518df;
+}
+.strt:hover {
+  color:#333;
+}
+.nm:hover {
+color:#2518df;
+}
+header {
+  display: flex;
+  justify-content: space-between;  
+ align-items: center;
+  padding: 20px;
+   background-color: #ffcc70; 
+  box-shadow:  6px 8px rgba(255, 0, 13, 0.1);
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+nav {
+  position: relative;
+  
+}
+
+.nav-links {
+  list-style: none;
+
+  gap: 20px;
+  display: flex;             /* Hidden by default */
+  z-index: 9999;     /* Ensure it overlaps everything */
+  
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: larger;
+
+}
+/* it wont show hamburger on the window size */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  
+ 
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #fff;
+    width: 150px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 15px;
+  
+  }
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+}
+h2 {
+    margin-top: 15px;
+    text-align: center;
+}
+.homepara {
+    text-align: center;
+    font-size: larger;
+    font-weight: 500;
+    margin-bottom: 60px;
+    margin-top: 20px;
+}
+.center-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+margin-top: 10px; /* Not needed when using full-page center */
+}
+
+.vcollect {
+    padding:10px;
+  font-size: 1.2rem;
+   text-align: center;
+    font-size: larger;
+    border-radius: 10px;
+    border:2px solid red;
+     display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    margin-top: 10px;
+      background-color: #df7518; 
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+ text-decoration: none;
+ 
+}
+.vcollect:hover {
+  transform: scale(1.3);
+  background-color: #2518df; 
+  font-weight: bold;
+  color:brown
+  
+  transition: all 0.2s ease-in-out;*/
+}
+ /* About*/
+.tophd {
+  margin-bottom:0px;
+}
+ .list-about{
+ display: flex;
+  align-items: center;
+   flex-wrap: wrap;
+ }
+
+ img {
+  width:170px; 
+  height:170px; 
+ margin-right:15px;
+ 
+   border-radius: 12px;
+   
+ }
+ #about {
+  background-image: url('bgimg.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* optional parallax effect */
+  color: #000000; /* light text if background is dark */
+  padding: 60px 20px;
+  font-size: larger;
+ }
+ .aboutwork {
+  font-weight: 400;
+  color:rgb(25, 0, 255);
+  line-height: 1.6;
+  
+ }
+ .aboutwork:hover {
+
+  text-transform: uppercase;
+  color:crimson;
+  text-shadow: 2px 2px 4px rgba(16, 2, 68, 0.3);
+ /*-webkit-background-clip:text;
+  -webkit-text-fill-color: green; — For gradient text effect */
+
+ }
+ .list-about ul {
+  list-style: none;
+  padding-right: 0;
+ }
+ h3 {
+  color: darkmagenta;
+ }
+ /* GAllery*/
+ .glry {
+  padding: 50px 20px;
+  /*background-color: #ee984c;*/
+  background: linear-gradient(-55deg, #e7d7d7, #6b63e0, #d8e61f, #a18cd1);
+  text-align: center;
+}
+
+.impact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.gry-pic {
+  background: #ddbcbc;
+  width: 300px;
+  /*height:500px;*/
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.gry-pic:hover {
+  transform: scale(1.03);
+  
+}
+
+.gry-pic img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16%;
+}
+
+.impact-text {
+  padding: 10px;
+}
+/* for to remove text decoration (text)*/
+.card-link {
+  text-decoration: none;
+  color:inherit;
+}
+/*Contact*/
+.cntct {
+  text-align: center;
+  padding:20px;
+}
+.cntct h3 {
+  padding-top: 20px;
+  color:navy;
+  font-weight: bold;
+}
+.cntct h3:hover {
+  padding-top: 20px;
+  color:rgb(128, 0, 11);
+ transition: transform 0.3s ease;
+ transform: scale(1.3);
+ 
+}
+.cntct .cstr {
+margin: 20px;
+
+font-size: larger;
+}
+
+ .cntct p {
+  margin: 10px;
+  font-size: medium;
+
+}
+
+.dsnr {
+  text-align: center; 
+font-size: 14px;
+ color: gray;
+}
